@@ -1,6 +1,12 @@
-﻿body {
+﻿@import url('https://fonts.googleapis.com/css?family=Noto+Serif|Poppins');
+/*font-family: 'Poppins', sans-serif;
+font-family: 'Noto Serif', serif;*/
+
+body {
     padding-top: 70px;
     padding-bottom: 50px;
+    /*font-family: 'Noto Serif', serif;*/
+    font-family: 'Poppins', sans-serif;
 }
 
 /* Set padding to keep content from hitting the edges */

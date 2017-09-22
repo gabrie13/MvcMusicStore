@@ -3,4 +3,9 @@
 }
 
 
-<h2>@ViewBag.Message</h2>
+
+@using (Html.BeginForm("Search", "Home", FormMethod.Get))
+{
+    <input name="q" type="text" />
+    <input type="submit" value="Search!" />
+}

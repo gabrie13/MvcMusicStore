@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Data.Entity;
+using MvcMusicStore.Models;
 
 namespace MvcMusicStore.Controllers
 {
@@ -32,5 +34,15 @@ namespace MvcMusicStore.Controllers
 
             return View();
         }
+
+        //public ActionResult Search(string q)
+        //{
+        //    var albums = .Albums
+        //                                .Include("Artist")
+        //                                .Where(a => a.Title.Contains(q))
+        //                                .Take(10));
+
+        //    return View(albums);
+        //}
     }
 }
