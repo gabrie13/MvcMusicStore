@@ -98,6 +98,25 @@ namespace MvcMusicStore.Controllers
             return View(album);
         }
 
+        //                                      POPULATING THE DROP DOWN LIST WITH A LINQ QUERY | PROFESSIONAL ASP.NET MVC 5 ... LOCATION 3334
+        //public ActionResult Search(int id)
+        //{
+        //    var album = storeDB.Albums.Single(a => a.AlbumId == id);
+
+        //    ViewBag.Genres = 
+        //         storeDB.Genres
+        //        .OrderBy(g => g.Name)
+        //        .AsEnumerable()
+        //        .Select(g => new SelectListItem
+        //        {
+        //            Text = g.Name,
+        //            Value = g.GenreId.ToString(),
+        //            Selected = album.GenreId == g.GenreId
+        //        });
+        //    return View(album); 
+        //}
+
+
         // GET: StoreManager/Delete/5
         public ActionResult Delete(int? id)
         {

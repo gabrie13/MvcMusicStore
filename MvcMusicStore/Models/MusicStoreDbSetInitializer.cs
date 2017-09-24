@@ -23,7 +23,7 @@ namespace MvcMusicStore.Models
             context.Albums.Add(new Album
             {
                 Artist = new Artist { Name = "Heavy D and the Boyz" },
-                Genre = new Genre { Name = "Rap" },
+                Genre = new Genre { Name = "Hip Hop" },
                 Price = 9.99m,
                 Title = "Peaceful Journey"
             });
@@ -34,7 +34,7 @@ namespace MvcMusicStore.Models
                 Artist = new Artist { Name = "The Gap Band" },
                 Genre = new Genre { Name = "Funk" },
                 Price = 9.99m,
-                Title = "Gap Band IV"
+                Title = "The Gap Band IV"
             });
 
 
@@ -44,6 +44,22 @@ namespace MvcMusicStore.Models
                 Genre = new Genre { Name = "American Punk" },
                 Price = 9.99m,
                 Title = "American Idiot"
+            });
+
+            context.Albums.Add(new Album
+            {
+                Artist = new Artist { Name = "The Gap Band" },
+                Genre = new Genre { Name = "Funk" },
+                Price = 9.99m,
+                Title = "The Gap Band III"
+            });
+
+            context.Albums.Add(new Album
+            {
+                Artist = new Artist { Name = "Dj Quik" },
+                Genre = new Genre { Name = "Rap" },
+                Price = 17.99m,
+                Title = "Balance and Options"
             });
 
 

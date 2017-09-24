@@ -1,11 +1,13 @@
-﻿@{
+﻿@*@{
     ViewBag.Title = "Home";
-}
+}*@
 
 
 
-@using (Html.BeginForm("Search", "Home", FormMethod.Get))
+
+
+@using (Html.BeginForm("Search", "Home", FormMethod.Get, new { target = "_blank", @class = "editForm", method = "get", data_validate = true ))};
 {
     <input name="q" type="text" />
-    <input type="submit" value="Search!" />
+    <input type="submit" value="Search" />
 }

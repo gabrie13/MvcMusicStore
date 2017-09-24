@@ -5,11 +5,13 @@ using System.Web;
 using System.Web.Mvc;
 using System.Data.Entity;
 using MvcMusicStore.Models;
+using System.Data.Entity.Infrastructure;
 
 namespace MvcMusicStore.Controllers
 {
     public class HomeController : Controller
     {
+        private MusicStoreDB storeDB = new MusicStoreDB();
 
         public ActionResult Message()
         {
@@ -28,21 +30,14 @@ namespace MvcMusicStore.Controllers
             return View();
         }
 
-        public ActionResult Details()
+        public ActionResult Search(string q)
         {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
+            var albums = storeDB.Albums
+                .Include("Artist")
+                .Where(a => a.Title.Contains(q))
+                .Take(10);
+            
+            return View(albums);
         }
-
-        //public ActionResult Search(string q)
-        //{
-        //    var albums = .Albums
-        //                                .Include("Artist")
-        //                                .Where(a => a.Title.Contains(q))
-        //                                .Take(10));
-
-        //    return View(albums);
-        //}
     }
 }
